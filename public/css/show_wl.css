@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #8EACCD;
+    text-align: center;
+}
+
+
+/* main */
+
+main {
+    margin-top: 130px;
+}
+
+.list {
+    background-color: #fff;
+    font-size: 15px;
+    width: 245px;
+    margin: 0 auto;
+}
+
+
+.wish {
+    margin-bottom: 10px;
+}
+
+.edit, .destroy {
+    margin: 40px 0;
+}
+
+.edit a, .destroy a{
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #D2E0FB;
+    color: #8EACCD;
+    padding: 10px 100px;
+}
+
+
+

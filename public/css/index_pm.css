@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #8EACCD;
+    text-align: center;
+}
+
+/* main */
+
+main {
+    margin-top: 130px;
+}
+
+.register {
+    margin: 40px 0;
+}
+
+.register a {
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #D2E0FB;
+    color: #8EACCD;
+    padding: 10px 100px;
+}
+
+.list {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list a {
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #F9F3CC;
+    color: #8EACCD;
+    width: 260px;
+    padding: 20px 0;
+}
+
+.list img {
+    width: 200px;
+}
+
