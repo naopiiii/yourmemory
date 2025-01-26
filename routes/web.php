@@ -21,6 +21,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// how to
+Route::get('/ht', function () {return view('ht');});
+
 // Good point
 Route::get('/gp', function () {return view('gp.gp');});
 Route::get('/gp/show', function () {return view('gp.gp_show');});
