@@ -51,7 +51,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'icon' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
         ]);
     }
 
@@ -62,11 +62,22 @@ class RegisterController extends Controller
      * @return \App\Models\User
      */
     protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+{
+    // 画像がアップロードされていない場合は、デフォルト画像を使用
+    $icon = 'default_icon.png';
+
+    if (isset($data['icon']) && $data['icon']->isValid()) {
+        // 画像を保存
+        $icon = $data['icon']->store('public/icons'); // public/icons フォルダに保存
+        $icon = basename($icon);  // ファイル名のみを保存
     }
+
+    return User::create([
+        'name' => $data['name'],
+        'email' => $data['email'],
+        'password' => Hash::make($data['password']),
+        'icon' => $icon,  // アイコンのファイル名を保存
+    ]);
+}
+
 }

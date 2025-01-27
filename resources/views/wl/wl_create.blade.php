@@ -6,32 +6,36 @@
 
 
     <main>
+        <form action="{{ route('wl.store') }}" method="POST">
+            @csrf
         <div class="list">
             <div class="date">
-                <input type="date">
+                <input type="date" name="date">
             </div>
 
             <div class="goodpoint">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <input type="text" name="wishlists[]">
+                <input type="text" name="wishlists[]">
+                <input type="text" name="wishlists[]">
+                <input type="text" name="wishlists[]">
+                <input type="text" name="wishlists[]">
+                <input type="text" name="wishlists[]">
+                <input type="text" name="wishlists[]">
+                <input type="text" name="wishlists[]">
+                <input type="text" name="wishlists[]">
+                <input type="text" name="wishlists[]">
             </div>
         </div>
 
         <div class="save">
-            <a href="#">保存</a>
+            <button type="submit">保存</button>
         </div>
+        </form>
 
         <div class="cancel">
             <a href="#">キャンセル</a>
         </div>
+       
 
     </main>
 

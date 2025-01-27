@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ThankyouController;
+use App\Http\Controllers\PicturememoryController;
+use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\MypageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,30 +31,34 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/ht', function () {return view('ht');});
 
 // Good point
-Route::get('/gp', function () {return view('gp.gp');});
+Route::get('/gp', [PostController::class, 'index'])->name('gp.index');
+Route::get('/gp/create', [PostController::class, 'create'])->name('gp.create');
+Route::post('/gp', [PostController::class, 'store'])->name('gp.store');
 Route::get('/gp/show', function () {return view('gp.gp_show');});
 Route::get('/gp/edit', function () {return view('gp.gp_edit');});
-Route::get('/gp/create', function () {return view('gp.gp_create');});
+
 
 // Thank you
-Route::get('/ty', function () {return view('ty.ty');});
+Route::get('/ty', [ThankyouController::class, 'index'])->name('ty.index');
+Route::get('/ty/create', [ThankyouController::class, 'create'])->name('ty.create');
+Route::post('/ty', [ThankyouController::class, 'store'])->name('ty.store');
 Route::get('/ty/show', function () {return view('ty.ty_show');});
 Route::get('/ty/edit', function () {return view('ty.ty_edit');});
-Route::get('/ty/create', function () {return view('ty.ty_create');});
 
 // Picture memory
-Route::get('/pm', function () {return view('pm.pm');});
+Route::get('/pm', [PicturememoryController::class, 'index'])->name('pm.index');
+Route::get('/pm/create', [PicturememoryController::class, 'create'])->name('pm.create');
 Route::get('/pm/show', function () {return view('pm.pm_show');});
 Route::get('/pm/edit', function () {return view('pm.pm_edit');});
-Route::get('/pm/create', function () {return view('pm.pm_create');});
 
 // Wish list
-Route::get('/wl', function () {return view('wl.wl');});
+Route::get('/wl', [WishlistController::class, 'index'])->name('wl.index');
+Route::get('/wl/create', [wishlistController::class, 'create'])->name('wl.create');
+Route::post('/wl', [WishlistController::class, 'store'])->name('wl.store');
 Route::get('/wl/show', function () {return view('wl.wl_show');});
 Route::get('/wl/edit', function () {return view('wl.wl_edit');});
-Route::get('/wl/create', function () {return view('wl.wl_create');});
 
 // mypage
-Route::get('/mp', function () {return view('mp.mp');});
+Route::get('/mp', [MypageController::class, 'index'])->name('mp.index');
 Route::get('/mp/edit', function () {return view('mp.mp_edit');});
 

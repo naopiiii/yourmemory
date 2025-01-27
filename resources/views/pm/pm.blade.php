@@ -9,12 +9,14 @@
         <div class="register">
             <a href="#">新規投稿</a>
         </div>
+        @foreach($tables as $table)
         <div class="list">
             <a href="#">
-                <img src="{{ asset('img/halohalo.JPG')}}" alt="">
-                <p>2024-10-23</p>
+                <img src="{{ $table ->img }}" alt="">
+                <p>{{ $table ->created_at->format('Y-m-d') }}</p>
             </a>
         </div>
+        @endforeach
     </main>
 
 @endsection

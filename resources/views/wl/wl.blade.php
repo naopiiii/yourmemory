@@ -9,9 +9,11 @@
         <div class="register">
             <a href="#">新規投稿</a>
         </div>
+        @foreach($tables as $table)
         <div class="list">
-            <a href="#">2024</a>
+            <a href="#">{{ $table ->created_at->year }}</a>
         </div>
+        @endforeach
     </main>
 
 @endsection

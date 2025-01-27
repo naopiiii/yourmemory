@@ -8,11 +8,11 @@
     <main>
         <div class="list">
             <div class="picture">
-                <img src="{{ asset('img/halohalo.JPG')}}" alt="">
+                <img src="{{ asset('storage/icons/' . $tables->icon) }}" alt="">
             </div>
 
             <div class="username">
-                <p>Naopiiii</p>
+                <p>{{ $tables ->name }}</p>
             </div>
 
             <div class="all_goodpoint">
