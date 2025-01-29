@@ -48,6 +48,7 @@ Route::get('/ty/edit', function () {return view('ty.ty_edit');});
 // Picture memory
 Route::get('/pm', [PicturememoryController::class, 'index'])->name('pm.index');
 Route::get('/pm/create', [PicturememoryController::class, 'create'])->name('pm.create');
+Route::post('/pm', [PicturememoryController::class, 'store'])->name('pm.store');
 Route::get('/pm/show', function () {return view('pm.pm_show');});
 Route::get('/pm/edit', function () {return view('pm.pm_edit');});
 

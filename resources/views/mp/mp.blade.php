@@ -8,7 +8,7 @@
     <main>
         <div class="list">
             <div class="picture">
-                <img src="{{ asset('storage/icons/' . $tables->icon) }}" alt="">
+                <img src="{{ asset('strage/icons/' . $tables->icon) }}" alt="">
             </div>
 
             <div class="username">

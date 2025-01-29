@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Pm_post extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'img',
+        'comment', // 追加
+    ];
 }

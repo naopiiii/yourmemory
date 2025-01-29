@@ -6,27 +6,30 @@
 
 
     <main>
+        <form action="{{ route('pm.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
         <div class="list">
             <div class="date">
-                <input type="date">
+                <input type="date" name="date">
             </div>
 
             <div class="img_upload">
-                <label for="fileInput">画像変更</label>
-                <input type="file" id="fileInput" style="display: none;">
+                <label for="fileInput">画像投稿</label>
+                <input type="file" id="fileInput" style="display: none;" name="img">
             </div>
 
             <div class="comment">
-                <input type="text">
+                <input type="text" name="comment">
             </div>
         </div>
 
         <div class="save">
-            <a href="#">保存</a>
+            <button type="submit">保存</button>
         </div>
+        </form>
 
         <div class="cancel">
-            <a href="#">キャンセル</a>
+            <a href="{{ route('pm.index') }}">キャンセル</a>
         </div>
 
     </main>

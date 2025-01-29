@@ -33,7 +33,7 @@
         </form>
 
         <div class="cancel">
-            <a href="#">キャンセル</a>
+            <a href="{{ route('ty.index') }}">キャンセル</a>
         </div>
 
     </main>

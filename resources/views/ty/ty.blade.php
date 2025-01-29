@@ -7,7 +7,7 @@
 
     <main>
         <div class="register">
-            <a href="#">新規投稿</a>
+            <a href="{{ route('ty.create') }}">新規投稿</a>
         </div>
         @foreach($tables as $table)
         <div class="list">

@@ -7,12 +7,12 @@
 
     <main>
         <div class="register">
-            <a href="#">新規投稿</a>
+            <a href="{{ route('pm.create') }}">新規投稿</a>
         </div>
         @foreach($tables as $table)
         <div class="list">
             <a href="#">
-                <img src="{{ $table ->img }}" alt="">
+                <img src="{{ asset('storage/posts/' . $table->img) }}" alt="投稿画像">
                 <p>{{ $table ->created_at->format('Y-m-d') }}</p>
             </a>
         </div>

@@ -33,7 +33,7 @@
         </form>
 
         <div class="cancel">
-            <a href="#">キャンセル</a>
+            <a href="{{ route('wl.index') }}">キャンセル</a>
         </div>
        
 
